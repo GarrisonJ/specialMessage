@@ -1,9 +1,9 @@
 var url = window.location.href;
-var name = url.split("?")[1];
+var name = url.split("?name=")[1];
 
-if (typeof name === 'undefined') {
+if (typeof name === 'undefined' || name === 'undefined') {
     removeBackground();
-    var exampleUrl = url + "?Steve_Smith";
+    var exampleUrl = url + "?name=Steve_Smith";
     setTitle("Hi :)");
     setMessage("Add a name to the end of the url like this: <p><a href='" + exampleUrl + "'>" + exampleUrl + "</a></p>");
 } else {
